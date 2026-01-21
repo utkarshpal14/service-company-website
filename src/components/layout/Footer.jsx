@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-dark border-t border-darkCard px-8 py-16">
@@ -5,37 +7,69 @@ export default function Footer() {
 
         {/* BRAND */}
         <div>
-          <h3 className="text-xl font-bold text-primary mb-4">
-            Verdance Consultancy Services LLP
-          </h3>
-          <p className="text-lightText text-sm leading-relaxed">
-            A professional consulting and IT services firm delivering
-            strategic, compliant, and technology-driven solutions
-            to support sustainable business growth.
-          </p>
+            <Link to="/" className="flex items-center gap-2 mb-4">
+                <img
+                src="/logo.png"
+                alt="Verdance Consultancy Services LLP Logo"
+                className="w-12 h-12 object-contain transition-transform duration-300 hover:scale-105"
+                />
+                <h3 className="text-xl font-bold text-primary">
+                Verdance Consultancy Services LLP
+                </h3>
+            </Link>
+
+            <p className="text-lightText text-sm leading-relaxed">
+                A professional consulting and IT services firm delivering
+                strategic, compliant, and technology-driven solutions
+                to support sustainable business growth.
+            </p>
         </div>
+
 
         {/* QUICK LINKS */}
         <div>
-          <h4 className="font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm text-lightText">
-            <li className="hover:text-primary cursor-pointer">Home</li>
-            <li className="hover:text-primary cursor-pointer">About</li>
-            <li className="hover:text-primary cursor-pointer">Services</li>
-            <li className="hover:text-primary cursor-pointer">Contact</li>
-          </ul>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-lightText">
+                <li>
+                <Link to="/" className="hover:text-primary transition">
+                    Home
+                </Link>
+                </li>
+                <li>
+                <Link to="/about" className="hover:text-primary transition">
+                    About
+                </Link>
+                </li>
+                <li>
+                <Link to="/services" className="hover:text-primary transition">
+                    Services
+                </Link>
+                </li>
+                <li>
+                <Link to="/contact" className="hover:text-primary transition">
+                    Contact
+                </Link>
+                </li>
+            </ul>
         </div>
 
+
         {/* SERVICES */}
-        <div>
-          <h4 className="font-semibold mb-4">Services</h4>
-          <ul className="space-y-2 text-sm text-lightText">
-            <li>Business Consulting</li>
-            <li>Legal & Compliance</li>
-            <li>Tax & Accounting</li>
-            <li>ERP & Digital Solutions</li>
-          </ul>
-        </div>
+        <ul className="space-y-2 text-sm text-lightText">
+            <li className="hover:text-primary transition cursor-default">
+                Business Consulting
+            </li>
+            <li className="hover:text-primary transition cursor-default">
+                Legal & Compliance
+            </li>
+            <li className="hover:text-primary transition cursor-default">
+                Tax & Accounting
+            </li>
+            <li className="hover:text-primary transition cursor-default">
+                ERP & Digital Solutions
+            </li>
+        </ul>
+
 
         {/* CONTACT */}
         <div>

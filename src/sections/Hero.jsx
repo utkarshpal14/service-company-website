@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function Hero() {
   return (
     
@@ -21,13 +23,51 @@ export default function Hero() {
           to help businesses grow confidently.
         </p>
 
-        <div className="flex gap-4 mt-8">
-          <button className="bg-primary text-black px-6 py-3 rounded">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+          <Link
+            to="/contact"
+            className="
+                w-full sm:w-auto
+                bg-primary text-black
+                px-6 py-3
+                rounded-lg
+                text-base font-medium
+                cursor-pointer
+                transition-all duration-300
+
+                hover:scale-105
+                hover:shadow-[0_0_25px_rgba(247,147,30,0.6)]
+
+                active:scale-95
+                text-center
+            "
+            >
             Get Started
-          </button>
-          <button className="border border-primary px-6 py-3 rounded">
+        </Link>
+
+
+          <Link
+            to="/services"
+            className="
+                w-full sm:w-auto
+                border border-primary
+                text-primary
+                px-6 py-3
+                rounded-lg
+                text-base font-medium
+                cursor-pointer
+                transition-all duration-300
+
+                hover:bg-primary hover:text-black
+                hover:scale-105
+
+                active:scale-95
+                text-center
+            ">
             Our Services
-          </button>
+        </Link>
+
         </div>
 
         <p className="text-xs text-gray-400 mt-6">
